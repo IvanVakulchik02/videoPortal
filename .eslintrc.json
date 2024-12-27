@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "typescript-sort-keys",
+    "prettier",
+    "unused-imports",
+    "sort-keys-fix"
+  ],
+  "rules": {
+    "prettier/prettier": "warn",
+    "curly": ["warn", "all"],
+    "prefer-template": "warn",
+    "@typescript-eslint/sort-type-constituents": "warn",
+    "@typescript-eslint/no-inferrable-types": "warn",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "warn",
+    "prefer-const": "warn",
+    "prefer-rest-params": "warn",
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "typescript-sort-keys/interface": "warn",
+    "typescript-sort-keys/string-enum": "warn",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "no-extra-semi": "off",
+    "@typescript-eslint/no-extra-semi": "warn",
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "unused-imports/no-unused-imports": "warn",
+    "@typescript-eslint/no-var-requires": "off",
+    "react/no-unescaped-entities": ["off"],
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-unused-vars": "off"
+  }
+}
