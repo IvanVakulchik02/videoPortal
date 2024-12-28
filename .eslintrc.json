@@ -9,7 +9,8 @@
     "typescript-sort-keys",
     "prettier",
     "unused-imports",
-    "sort-keys-fix"
+    "sort-keys-fix",
+    "perfectionist"
   ],
   "rules": {
     "prettier/prettier": "warn",
@@ -32,6 +33,53 @@
     "@typescript-eslint/no-var-requires": "off",
     "react/no-unescaped-entities": ["off"],
     "@typescript-eslint/no-unused-vars": "error",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "perfectionist/sort-objects": [
+      "error",
+      {
+        "type": "alphabetical",
+        "order": "asc",
+        "ignoreCase": true,
+        "specialCharacters": "keep",
+        "partitionByComment": false,
+        "partitionByNewLine": false,
+        "styledComponents": true,
+        "ignorePattern": [],
+        "matcher": "minimatch",
+        "groups": [],
+        "customGroups": {}
+      }
+    ],
+    "perfectionist/sort-imports": [
+      "error",
+      {
+        "type": "alphabetical",
+        "order": "asc",
+        "ignoreCase": true,
+        "specialCharacters": "keep",
+        "matcher": "regex",
+        "newlinesBetween": "always",
+        "groups": [
+          "node_modules",
+          "reactNextMui",
+          "components",
+          "sideEffect",
+          "parent",
+          "sibling",
+          "css"
+        ],
+        "customGroups": {
+          "value": {
+            "reactNextMui": ["^react$", "^next", "^@mui"],
+            "node_modules": ["^(?!react$|next|@mui)@?\\w"],
+            "components": ["^(@|components)(/.*|$)"],
+            "sideEffect": ["^\\u0000"],
+            "parent": ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+            "sibling": ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+            "css": ["^.+\\.?(css)$"]
+          }
+        }
+      }
+    ]
   }
 }
