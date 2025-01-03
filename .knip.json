@@ -1,0 +1,3 @@
+{
+  "ignoreDependencies": ["sass", "lint-staged"]
+}
