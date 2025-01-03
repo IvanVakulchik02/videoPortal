@@ -1,0 +1,43 @@
+.sort-panel {
+  display: flex;
+  padding: 20px 40px;
+  gap: 40px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+
+    .sort-label {
+      padding-bottom: 10px;
+      @include FontStyle(500, 14px, 16px, #000000);
+    }
+
+    .sort-select {
+      padding: 6px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .search-input {
+      border: none;
+      background: #cbcbcb;
+      border-radius: 8px;
+      padding: 8px;
+    }
+  }
+
+  .clear-filter__btn {
+    padding: 8px 15px;
+    width: 130px;
+    background: rgb(255, 99, 99);
+    transition: 0.3s;
+
+    &:hover {
+      background: rgb(255, 45, 45);
+    }
+  }
+}

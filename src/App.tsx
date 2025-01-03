@@ -1,17 +1,21 @@
 import { Route, Routes } from 'react-router-dom'
 
-import { Home } from './screens/Home'
-import { Login } from './screens/Login'
-import { NotFound } from './screens/NotFound'
-import { Register } from './screens/Register'
+import { HomeScreen } from './screens/Home'
+import { LoginScreen } from './screens/Login'
+import { NotFoundScreen } from './screens/NotFound'
+import { ProfileScreen } from './screens/Profile'
+import { RegisterScreen } from './screens/Register'
+import { VideoInfoScreen } from './screens/VideoInfo'
 
 export const App = (): React.JSX.Element => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/" element={<HomeScreen />} />
+      <Route path="/login" element={<LoginScreen />} />
+      <Route path="/register" element={<RegisterScreen />} />
+      <Route path="/video/:id" element={<VideoInfoScreen />} />
+      <Route path="/profile" element={<ProfileScreen />} />
+      <Route path="*" element={<NotFoundScreen />} />
     </Routes>
   )
 }

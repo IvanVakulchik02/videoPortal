@@ -1,0 +1,41 @@
+.dropdown {
+  position: relative;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.3s;
+
+  &:hover {
+    background: rgb(225, 225, 225);
+  }
+
+  &-list {
+    position: absolute;
+    background: rgb(200, 200, 200);
+    top: 45px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    left: 0;
+    list-style: none;
+
+    &__item {
+      padding: 4px 8px;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &.selected {
+        background: rgb(177, 215, 249);
+      }
+
+      &:hover {
+        background: rgb(136, 136, 136);
+      }
+    }
+  }
+}

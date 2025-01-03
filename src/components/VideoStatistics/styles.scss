@@ -1,0 +1,13 @@
+.video__statistics {
+  display: flex;
+  gap: 15px;
+  padding: 20px 0 0 0;
+  flex-wrap: wrap;
+
+  &-item {
+    gap: 3px;
+    display: flex;
+    align-items: center;
+    @include FontStyle(400, 14px, 16px, #000000);
+  }
+}

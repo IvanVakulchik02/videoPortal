@@ -3,17 +3,20 @@ import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
 import { App } from './App'
-import { store } from './store'
+import { Layout } from './components/Layout'
 
 import '../src/styles/global.scss'
 
 import './firebase'
+import { store } from './store'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <Layout>
+        <App />
+      </Layout>
     </BrowserRouter>
   </Provider>
 )

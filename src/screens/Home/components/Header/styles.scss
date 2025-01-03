@@ -1,0 +1,104 @@
+.header {
+  display: flex;
+  padding: 10px 40px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+
+  &-logo {
+    cursor: pointer;
+  }
+
+  .search__actions {
+    display: flex;
+    width: 40%;
+    gap: 10px;
+    height: 35px;
+
+    .search-input {
+      border: none;
+      height: 100%;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      width: 100%;
+      background: rgb(203, 203, 203);
+      padding: 4px 15px;
+    }
+
+    .search-btn {
+      height: 100%;
+      cursor: pointer;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: #2f80ed;
+      @include FontStyle(400, 14px, 16px, #ffffff);
+      transition: 0.3s;
+
+      &:hover {
+        background: #2567be;
+      }
+    }
+
+    .settings-btn {
+      height: 100%;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 8px;
+      background: #2f80ed;
+      @include FontStyle(400, 14px, 16px, #ffffff);
+      transition: 0.3s;
+
+      &:hover {
+        background: #2567be;
+      }
+    }
+  }
+
+  .profile-info {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &__content {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .profile-options {
+        border-radius: 8px;
+        width: 100px;
+        position: absolute;
+        z-index: 1;
+        top: 45px;
+        right: 0;
+        background: white;
+        transition: 0.3s;
+        box-shadow: 0px 0px 6px 0px #bfbfbf;
+        overflow: hidden;
+
+        &__item {
+          padding: 10px 15px;
+          border-bottom: 1px solid rgb(209, 209, 209);
+
+          &:last-child {
+            border: none;
+          }
+
+          &.color-green {
+            color: green;
+          }
+
+          &.color-red {
+            color: red;
+          }
+
+          &:hover {
+            background: #e7e7e7;
+          }
+        }
+      }
+    }
+  }
+}

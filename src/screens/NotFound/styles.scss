@@ -1,0 +1,26 @@
+.error-page__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  .error-page__content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    &-info {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      &__text {
+        @include FontStyle(700, 28px, 30px, #828282);
+      }
+
+      &__link {
+        @include FontStyle(400, 16px, 18px, #2f80ed);
+      }
+    }
+  }
+}
