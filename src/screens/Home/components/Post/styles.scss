@@ -1,0 +1,84 @@
+.post {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 3px 1px #d0d0d0;
+  background: #e5e5e5;
+  width: 290px;
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+
+  &-image {
+    width: 100%;
+    position: relative;
+
+    .image {
+      width: 100%;
+    }
+  }
+
+  .duration {
+    position: absolute;
+    bottom: 6px;
+    right: 4px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    padding: 3px;
+    background: black;
+    @include FontStyle(400, 12px, 14px, #fefefe);
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+
+    &__title {
+      width: 100%;
+      padding: 40px 0 15px 0;
+      display: block;
+      overflow: hidden;
+      white-space: pre;
+      text-overflow: ellipsis;
+      @include FontStyle(600, 20px, 22px, #4f4f4f);
+    }
+
+    &__created-date {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+
+  &-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .post-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+
+    &-red {
+      background: #eb5757;
+    }
+    &-yellow {
+      background: #f2c94c;
+    }
+    &-green {
+      background: #27ae60;
+    }
+    &-blue {
+      background: #2f80ed;
+    }
+  }
+}

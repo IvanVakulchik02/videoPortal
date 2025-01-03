@@ -1,10 +1,8 @@
 export const initialUserState: UserInitialState = {
-  email: null,
+  email: sessionStorage.getItem('vp-userEmail'),
   id: null,
-  token: null,
 }
 interface UserInitialState {
   email: string | null
   id: string | null
-  token: string | null
 }

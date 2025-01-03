@@ -1,0 +1,35 @@
+.add-video__modal-wrapper {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1515159c;
+
+  .add-video__form {
+    width: 400px;
+    background: white;
+    display: flex;
+    border-radius: 8px;
+    padding: 25px;
+    flex-direction: column;
+
+    &-title {
+      @include FontStyle(600, 18px, 20px, #000000);
+      padding-bottom: 20px;
+    }
+
+    &-btn {
+      padding-top: 20px;
+      border: none;
+      width: 100%;
+      display: flex;
+      background: none;
+      justify-content: flex-end;
+    }
+  }
+}

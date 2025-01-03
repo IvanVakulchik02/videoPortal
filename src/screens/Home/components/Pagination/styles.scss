@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  &-item {
+    width: 40px;
+    height: 40px;
+    margin: 0 4px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &.active {
+      border: 1px solid #2f80ed;
+    }
+
+    &:hover {
+      background: #2f80ed;
+    }
+  }
+}

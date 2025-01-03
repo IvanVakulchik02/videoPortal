@@ -1,0 +1,17 @@
+.input {
+  width: 100%;
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  padding: 14px 20px;
+  background-color: #ededed;
+  @include FontStyle(400, 14px, 16px, #000000);
+}
+
+.input-label {
+  width: 100%;
+  padding-bottom: 5px;
+  &__text {
+    @include FontStyle(400, 14px, 16px, #8e8e8e);
+  }
+}

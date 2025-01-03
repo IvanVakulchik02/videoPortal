@@ -4,16 +4,14 @@ interface useAuthProps {
   email: string | null
   id: string | null
   isAuth: boolean
-  token: string | null
 }
 
 export const useAuth = (): useAuthProps => {
-  const { email, id, token } = useAppSelector((state) => state.user)
+  const { email, id } = useAppSelector((state) => state.user)
 
   return {
     email,
     id,
     isAuth: !!email,
-    token,
   }
 }

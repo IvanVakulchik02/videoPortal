@@ -1,3 +1,5 @@
+@import '../assets/scss/mixins';
+
 body {
   background: #f7fafc;
   display: flex;
@@ -22,3 +24,11 @@ a {
   scrollbar-color: transparent;
   scrollbar-track-color: transparent;
 }
+
+@import '../components/index.scss';
+@import '../screens/NotFound/styles.scss';
+@import '../screens/Home/styles.scss';
+@import '../screens/VideoInfo/styles.scss';
+@import '../screens/Register/styles.scss';
+@import '../screens/Login/styles.scss';
+@import '../screens/Profile/styles.scss';

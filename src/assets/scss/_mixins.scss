@@ -1,0 +1,8 @@
+@mixin FontStyle($weight: 700, $size: 16px, $lineHeight: 16px, $color: white) {
+  color: $color;
+  font-family: Montserrat, sans-serif;
+  font-size: $size;
+  font-style: normal;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
